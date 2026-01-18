@@ -102,7 +102,10 @@ function App() {
     const m = Math.floor((diff % 3600000) / 60000);
     const s = Math.floor((diff % 60000) / 1000);
     setCountdown(
-      `${nextPrayer.name}   vaktine kalan:  ${h}:${m < 10 ? "0" + m : m}:${s < 10 ? "0" + s : s} `,
+      <>
+    {nextPrayer.name} vaktine kalan süre: <br/> 
+    {`${h}:${m < 10 ? "0" + m : m}:${s < 10 ? "0" + s : s}`}
+  </>
     );
   };
 
