@@ -106,7 +106,7 @@ function App() {
     setCountdown(
       <>
     {nextPrayer.name} vaktine kalan süre: <br/> 
-    {`${h}:${m < 10 ? "0" + m : m}:${s < 10 ? "0" + s : s}`}
+    <strong>{`${h}:${m < 10 ? "0" + m : m}:${s < 10 ? "0" + s : s}`}</strong>
   </>
     );
   };
