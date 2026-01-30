@@ -16,4 +16,4 @@
 
 - [Uygulama](https://namaz-vakitleri.netlify.app/)
 
-- ![gif](src/assets/vakit.gif)
+- ![gif](src/assets/App.gif)

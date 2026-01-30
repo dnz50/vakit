@@ -32,19 +32,21 @@ function App() {
   };
 
   const hijriMonthsTR = {
-    Muharram: "Muharrem",
-    Safar: "Safer",
-    "Rabi' al-awwal": "Rebiülevvel",
-    "Rabi' al-thani": "Rebiülahir",
-    "Jumada al-ula": "Cemaziyelevvel",
-    "Jumada al-akhira": "Cemaziyelahir",
-    Rajab: "Recep",
-    "Sha'ban": "Şaban",
-    Ramadan: "Ramazan",
-    Shawwal: "Şevval",
-    "Dhu al-Qi'dah": "Zilkade",
-    "Dhu al-Hijjah": "Zilhicce",
+    1: "Muharrem",
+    2: "Safer",
+    3 : "Rebiülevvel",
+    4: "Rebiülahir",
+    5: "Cemaziyelevvel",
+    6: "Cemaziyelahir",
+    7: "Recep",
+    8: "Şaban",
+    9: "Ramazan",
+    10: "Şevval",
+    11: "Zilkade",
+    12: "Zilhicce",
   };
+  
+  
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -118,12 +120,17 @@ function App() {
         if (data.code === 200) {
           setTimes(data.data.timings);
           const h = data.data.date.hijri;
-          const monthTR = hijriMonthsTR[h.month.en] || h.month.en;
+          const monthTR = hijriMonthsTR[h.month.number] || h.month.number;
           setHijri(`${h.day} ${monthTR} ${h.year}`);
           localStorage.setItem("lastCity", city);
+
         }
+
       });
   }, [city]);
+
+  
+  
 
   return (
     <div
