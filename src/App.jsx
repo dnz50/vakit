@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./index.css";
 import alertSound from "./assets/alert.mp3";
 
-// Arka plan resimlerini import edin (assets klasöründe olduklarını varsayıyoruz)
+
 import dayImg from "./assets/day.jpg";
 import sunsetImg from "./assets/sunset.jpg";
 import nightImg from "./assets/night.jpg";
@@ -21,7 +21,7 @@ function App() {
 
   const audioPlayer = useRef(new Audio(alertSound));
 
-  // Sözlükler: İngilizce -> Türkçe
+  // İngilizce -> Türkçe
   const prayerNamesTR = {
     Imsak: "İmsak ",
     Sunrise: "Güneş ",
